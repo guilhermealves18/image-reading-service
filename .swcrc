@@ -1,0 +1,43 @@
+{
+    "jsc": {
+        "keepClassNames": true,
+        "externalHelpers": false,
+        "loose": true,
+        "transform": {
+            "legacyDecorator": true,
+            "decoratorMetadata": true
+        },
+        "parser": {
+            "syntax": "typescript",
+            "decorators": true,
+            "dynamicImport": true
+        },
+        "baseUrl": "./src",
+        "paths": {
+            "@config/*": [
+                "config/*"
+            ],
+            "@helpers/*": [
+                "helpers/*"
+            ],
+            "@lib/*": [
+                "lib/*"
+            ],
+            "@modules/*": [
+                "modules/*"
+            ],
+            "@shared/*": [
+                "shared/*"
+            ]
+        }
+    },
+    "module": {
+        "type": "commonjs"
+    },
+    "env": {
+        "targets": {
+            "node": 20
+        }
+    },
+    "sourceMaps": true
+}

@@ -1,0 +1,54 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Customer {
+  id                   String                @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  code                 String                @unique
+  email                String                @unique
+  name                 String
+  created_at           DateTime              @default(now())
+  updated_at           DateTime?
+  deleted_at           DateTime?
+  CustomerMeasurements CustomerMeasurement[]
+
+  @@map("customers")
+}
+
+enum MeasureType {
+  GAS
+  WATER
+}
+
+model CustomerMeasurement {
+  id               String      @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  customer_code    String
+  measure_datetime DateTime
+  measure_type     MeasureType
+  image_url        String
+  customer         Customer    @relation(fields: [customer_code], references: [code])
+  created_at       DateTime    @default(now())
+  updated_at       DateTime?
+  deleted_at       DateTime?
+  Measure          Measure[]
+
+  @@map("customer_measurement")
+}
+
+model Measure {
+  id                      String               @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  customer_code           String
+  confirmed_value         Int?
+  created_at              DateTime             @default(now())
+  updated_at              DateTime?
+  deleted_at              DateTime?
+  CustomerMeasurement     CustomerMeasurement? @relation(fields: [customer_measurement_id], references: [id])
+  customer_measurement_id String?              @db.Uuid
+
+  @@map("measures")
+}
