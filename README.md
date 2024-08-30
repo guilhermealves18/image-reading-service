@@ -10,6 +10,56 @@ As imagens utilizadas para exemplos estão localizadas na pasta `images_examples
 - O Insomnia foi utilizado para testar as rotas do serviço.
 - O arquivo JSON de configuração do ambiente está localizado na pasta `insomnia` dentro do projeto.
 
+# Gerenciamento de Labels
+
+Este projeto utiliza três labels principais para organizar e classificar issues, pull requests e outros itens relacionados ao desenvolvimento do software. Abaixo estão as descrições e finalidades de cada uma dessas labels.
+
+## Labels Utilizadas
+
+### 1. **Produção**
+
+- **Descrição**:
+  A label **Produção** é utilizada para identificar issues e pull requests que afetam diretamente o ambiente de produção. Isso inclui funcionalidades que estão prontas para serem lançadas aos usuários finais, correções de bugs em produção, e quaisquer mudanças que necessitem ser monitoradas cuidadosamente após o lançamento.
+
+- **Quando Usar**:
+  - Quando uma feature ou correção de bug está pronta para ser lançada em produção.
+  - Para identificar problemas críticos que afetam o ambiente de produção.
+  - Durante a fase de revisão final antes do lançamento.
+
+- **Importância**:
+  É crucial garantir que todos os itens marcados com a label **Produção** tenham sido amplamente testados e validados, pois qualquer alteração aplicada afetará diretamente os usuários finais.
+
+### 2. **Teste**
+
+- **Descrição**:
+  A label **Teste** é utilizada para identificar issues e pull requests que estão em fase de teste. Isso inclui novas funcionalidades que precisam ser verificadas, correções de bugs que estão sendo validadas, ou qualquer outro item que ainda não foi aprovado para produção.
+
+- **Quando Usar**:
+  - Quando uma nova funcionalidade ou correção de bug foi implementada e precisa ser testada.
+  - Para identificar tarefas que estão em revisão pelos times de QA (Quality Assurance).
+  - Durante a fase de desenvolvimento, para marcar itens que requerem testes adicionais.
+
+- **Importância**:
+  A fase de teste é essencial para garantir que todas as mudanças funcionem conforme o esperado antes de serem movidas para produção. As labels **Teste** ajudam a separar o que ainda está em validação do que já está pronto para ser lançado.
+
+### 3. **Desenvolvimento**
+
+- **Descrição**:
+  A label **Desenvolvimento** é utilizada para identificar issues e pull requests que estão em fase de desenvolvimento ativo. Isso inclui a implementação de novas funcionalidades, correções de bugs, e outras atividades relacionadas ao código que ainda não estão prontas para teste ou produção.
+
+- **Quando Usar**:
+  - Quando você está trabalhando em uma nova feature ou correção de bug.
+  - Para marcar issues que estão sendo ativamente desenvolvidas.
+  - Durante a fase de planejamento e implementação de mudanças no projeto.
+
+- **Importância**:
+  Marcar itens com a label **Desenvolvimento** ajuda a equipe a entender quais tarefas estão em progresso e quais ainda precisam ser trabalhadas antes de serem testadas.
+
+## Conclusão de labels
+
+O uso adequado das labels **Produção**, **Teste**, e **Desenvolvimento** é fundamental para manter o fluxo de trabalho organizado e garantir que cada fase do desenvolvimento seja tratada com a devida atenção. Certifique-se de aplicar as labels corretamente para que todos na equipe possam acompanhar o status de cada item de maneira clara e eficiente.
+
+
 ## Rotas de Medição
 
 ### 1. `POST /customer-measures/upload`
