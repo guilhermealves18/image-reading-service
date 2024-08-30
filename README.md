@@ -13,6 +13,8 @@ As imagens utilizadas para exemplos estão localizadas na pasta `images_examples
 ## Rotas de Medição
 
 ### 1. `POST /customer-measures/upload`
+**Veja o mini tutorial de como utilizar esta rota no final deste README**
+
 Esta rota faz o upload de uma imagem de medidor de água ou gás e retorna o valor da medição extraído da imagem.
 
 - **Função**:
@@ -44,6 +46,15 @@ Esta rota retorna as medições realizadas para o cliente com o código `0003`, 
 
 ### 5. `POST /customers`
 Esta rota cria um novo cliente.
+
+- ### Corpo da requisição para criar um cliente
+```json
+{
+	"code": "0001",
+	"email": "guilherme@example.com",
+	"name": "Guilherme Alves"
+}
+```
 
 - **Função**:
   - Registra um novo cliente no sistema com os dados fornecidos.
